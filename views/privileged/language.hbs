@@ -1,0 +1,43 @@
+  <div id="login_div" class="container-fluid">
+    <h3>Figurados y Mallas privileged sesion</h3>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="email_field" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="password_field" placeholder="Password">
+      </div>
+     
+    <button onclick="login()" class="btn btn-primary" >Login to Account</button>
+  </div>
+
+  
+    <div id="user_div" class="container-fluid">
+
+
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Hey there!</strong> Be free to ask for more languages! We're Deve..
+            <img src="/media/deve.png" width="70" height="70">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+
+    
+
+                <form action="/signup/traslate" method="POST">
+                <label>
+                    
+                        <div class="custom-control custom-switch">
+                        <input type="checkbox"  name="teach" data-toggle="toggle" class="custom-control-input" id="customSwitch1">
+                        <label class="custom-control-label" for="customSwitch1"></label>
+                        <i class="fas fa-globe-americas"></i>
+                        
+                        </div>
+                        <input type="submit" class="btn btn-primary btn-sm" name="formSubmit" value="Traslate" />
+                </label>                         
+                </form>
+    </div>

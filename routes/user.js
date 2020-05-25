@@ -25,6 +25,7 @@ router.get('/hierro', function (req, res, next) {
     contador = 1+snapshot.val();
     db.ref('Cotizaciones/CotizacionesHierro').set(contador);
  });
+  
   res.render('user/cotizar');
 });
 router.get('/malla', function (req, res, next) {
@@ -45,6 +46,20 @@ router.post('/new-contacto',(req,res)=>{
     message:req.body.message
   };
   db.ref('Mensajes').push(newContacto);
+  //res.render('index.hbs',{layouts:'index'});
+  res.redirect('/');
+});
+
+
+router.post('/new-cotizacion',(req,res)=>{
+  console.log(req.body);
+  const newContacto = {
+    nameCotz:req.body.name,
+    emailCotz:req.body.email,
+    subjectCotz:req.body.subject,
+    messageCotz:req.body.message
+  };
+  db.ref('SolicitudCotizaciones').push(newContacto);
   //res.render('index.hbs',{layouts:'index'});
   res.redirect('/');
 });

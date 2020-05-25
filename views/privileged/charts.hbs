@@ -1,10 +1,18 @@
-<div id="login_div" class="main-div">
-    <h3>Firebase Web login Example</h3>
-    <input type="email" placeholder="Email..." id="email_field" />
-    <input type="password" placeholder="Password..." id="password_field" />
+  <div id="login_div" class="container-fluid">
+    <h3>Figurados y Mallas privileged sesion</h3>
 
-    <button onclick="login()">Login to Account</button>
-</div>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="email_field" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="password_field" placeholder="Password">
+      </div>
+     
+    <button onclick="login()" class="btn btn-primary" >Login to Account</button>
+  </div>
         <!-- Begin Page Content -->
         <div class="container-fluid" id="user_div">
 

@@ -1,18 +1,26 @@
-  <div id="login_div" class="main-div">
+  <div id="login_div" class="container-fluid">
     <h3>Figurados y Mallas privileged sesion</h3>
-    <input type="email" placeholder="Email..." id="email_field" />
-    <input type="password" placeholder="Password..." id="password_field" />
 
-    <button onclick="login()">Login to Account</button>
+      <div class="form-group">
+        <label for="exampleInputEmail1">Email address</label>
+        <input type="email" class="form-control" id="email_field" aria-describedby="emailHelp" placeholder="Enter email">
+        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Password</label>
+        <input type="password" class="form-control" id="password_field" placeholder="Password">
+      </div>
+     
+    <button onclick="login()" class="btn btn-primary" >Login to Account</button>
   </div>
 
-<div id="user_div" class="loggedin-div">
+<div id="user_div" class="container-fluid">
 
 
 
             
         <form action="/signup/onoff" method="POST">
-                <div class="custom-control custom-checkbox"></div>
+                <div class="custom-control custom-checkbox">
                 <input type="checkbox" name="controliot" data-toggle="toggle" class="custom-control-input" id="defaultUnchecked">
                 <label class="custom-control-label" for="defaultUnchecked">IOT</label>
                 <input type="submit" class="btn btn-primary btn-sm"  name="formSubmit" value="Confirmar" />
@@ -65,7 +73,8 @@
 
 
                        
-     </div>                       
+     </div>   
+                         
 
     <script>
     var ctx = document.getElementById('myChart').getContext('2d');
@@ -96,3 +105,5 @@
         }
     });
     </script>      
+
+ 

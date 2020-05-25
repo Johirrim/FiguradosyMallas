@@ -72,9 +72,13 @@ router.get('/tables', function(req, res, next) {
   
   db.ref('Mensajes').once('value', (snapshot) => {
     data = snapshot.val();  
-    console.log(data);
-    res.render('privileged/tables',{Data: data, layout:'privileged'});
   });
+  db.ref('SolicitudCotizaciones').once('value', (snapshot) => {
+    data2 = snapshot.val();  
+    res.render('privileged/tables',{Data: data,Data2: data2, layout:'privileged'});
+  });
+  
+
 });
 
 
@@ -99,6 +103,10 @@ router.get('/iot', function(req, res, next) {
   });
 });
 
+/* GET language page. */
+router.get('/language', function(req, res, next) {
+  res.render('privileged/language',{layout:'privileged'}); 
+});
 
 
 router.post('/onoff',(req,res) => {
