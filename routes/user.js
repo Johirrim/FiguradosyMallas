@@ -14,6 +14,27 @@ const db=admin.database();
 router.get('/', function(req, res, next) {
   res.render('user/main', { title: 'Figurados y Mallas' });
 });
+/* GET cotizar page. */
+router.get('/cotizar', function(req, res, next) {
+  res.render('user/cotizar', { title: 'Figurados y Mallas' });
+});
+
+router.get('/hierro', function (req, res, next) {
+  
+  db.ref('Cotizaciones/CotizacionesHierro').once('value', (snapshot) => {
+    contador = 1+snapshot.val();
+    db.ref('Cotizaciones/CotizacionesHierro').set(contador);
+ });
+  res.render('user/cotizar');
+});
+router.get('/malla', function (req, res, next) {
+  
+  db.ref('Cotizaciones/CotizacionesMalla').once('value', (snapshot) => {
+    contador1 = 1+snapshot.val();
+    db.ref('Cotizaciones/CotizacionesMalla').set(contador1);
+ });
+  res.render('user/cotizar');
+});
 
 router.post('/new-contacto',(req,res)=>{
   console.log(req.body);

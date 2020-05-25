@@ -50,7 +50,15 @@ router.get('/main', function(req, res, next) {
 
 /* GET charts page. */
 router.get('/charts', function(req, res, next) {
-  res.render('privileged/charts',{layout:'privileged'}); 
+
+  db.ref('Cotizaciones').once('value', (snapshot) => {
+    var data = snapshot.val();  
+    var acum = Object.values(data);
+    //acum=acum[acum.length-1].Cortes;
+    h=acum[0]*100/(acum[0]+acum[1]);
+    m=100-h;
+    res.render('privileged/charts',{Data: data,malla:m,hierro:h, layout:'privileged'});
+  });
 });
 
 /* GET calculator page. */
@@ -87,7 +95,6 @@ router.get('/iot', function(req, res, next) {
     var data = snapshot.val();  
     var acum = Object.values(data);
     acum=acum[acum.length-1].Cortes;
-    console.log(acum);
     res.render('privileged/iot',{Data: data,acumulado:acum, layout:'privileged'});
   });
 });
