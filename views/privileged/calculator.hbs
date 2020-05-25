@@ -1,0 +1,156 @@
+<div id="login_div" class="main-div">
+    <h3>Firebase Web login Example</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+</div>
+<!-- Begin Page Content -->
+
+<div class="container main-box" id="user_div">
+
+	<div class="row mb-0">
+		<div class="col">
+			<p>Con esta calculadora puedes calcular el peso aproximado de una <b>varilla corrugada de acero</b> a partir de su longitud y su diámetro.</p>
+			<p>Los resultados se obtienen asumiendo una <b>sección circular</b> y una <b>densidad del acero</b> igual a 7850 kg/m<sup>3</sup>.</p>
+			<h2>Peso de una varilla corrugada (medidas estándar)</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-8 col-lg-4 mx-auto">
+			<p>Diámetro nominal [&#8960;]</p>
+			<div class="input-group mb-3">	
+				<label class="form-check-label">Unidad:</label>		
+				<div class="form-check form-check-inline">
+				  <input class="form-check-input ml-3" type="radio" name="unitD" id="unit1" value="option1" checked>
+				  <label class="form-check-label" for="unidad1">Pulgadas</label>
+				</div>
+				<div class="form-check form-check-inline">
+				  <input class="form-check-input" type="radio" name="unitD" id="unit2" value="option2">
+				  <label class="form-check-label" for="unidad2">Milímetros</label>
+				</div>
+			</div>
+			<div class="input-group mb-2" id="in-opt">
+				<select class="form-control form-control-lg" id="in-val">
+					<option value="2">1/4"</option>
+					<option value="3">3/8"</option>
+					<option value="4" selected>1/2"</option>
+					<option value="5">5/8"</option>
+					<option value="6">3/4"</option>
+					<option value="7">7/8"</option>
+					<option value="8">1"</option>
+					<option value="9">1 &#8539;"</option>
+					<option value="10">1 &#188;"</option>
+					<option value="11">1 &#8540;"</option>
+					<option value="12">1 &#189;"</option>
+					<option value="14">1 &#190;"</option>
+					<option value="18">2 &#188;"</option>
+				</select>
+			</div>
+			<div class="input-group mb-2" id="mm-opt">
+				<select class="form-control form-control-lg" id="mm-val">
+					<option value="6">6 mm</option>
+					<option value="8">8 mm</option>
+					<option value="10" selected>10 mm</option>
+					<option value="12">12 mm</option>
+					<option value="14">14 mm</option>
+					<option value="16">16 mm</option>
+					<option value="20">20 mm</option>
+					<option value="25">25 mm</option>
+					<option value="28">28 mm</option>
+					<option value="32">32 mm</option>
+					<option value="40">40 mm</option>
+					<option value="50">50 mm</option>
+				</select>
+			</div>
+		</div>
+	</div>
+	<div class="row my-0">
+		<div class="col-md-8 col-lg-4 mx-auto">
+			<p>Longitud [l]</p>
+			<div class="input-group mb-3">	
+				<input id="l" class="form-control form-control-lg" type="number" step="any" placeholder="Longitud"/>
+				<div class="input-group-append">
+					<select class="input-group-text" id="ul">
+					<option value="0">mm</option>
+					<option value="1" selected>m</option>
+					<option value="2">ft</option>
+					</select>
+				</div>
+			</div>
+			<hr>
+		</div>
+	</div>
+	<div class="row mt-0">
+		<div class="col-md-8 col-lg-4 mx-auto">
+			<p>Peso:</p>
+			<div class="input-group mb-3">	
+				<input type="text" readonly class="form-control-plaintext form-control-lg border rounded-left pl-3" id="p" placeholder="Peso">
+				<div class="input-group-append">
+					<select class="input-group-text" id="up">
+					<option value="0">lb</option>
+					<option value="1" selected>kg</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row mb-0">
+		<div class="col">
+			<h2>Peso de una varilla corrugada en función del diámetro</h2>
+			<p>Con esta calculadora puedes calcular el peso de una varilla corrugada a partir del valor de <b>diámetro nominal</b> y <b>longitud</b> que introduzcas.</p>
+		</div>
+	</div>
+	<div class="row mt-0">
+		<div class="col-md-8 col-lg-4 mx-auto">
+			<p>Diámetro nominal [&#8960;]</p>
+			<div class="input-group mb-3">			
+				<input id="d2" class="form-control form-control-lg" type="number" step="any" placeholder="Diámetro"/>
+				<div class="input-group-append">
+					<select class="input-group-text" id="ud2">
+					<option value="0">in</option>
+					<option value="1" selected>mm</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8 col-lg-4 mx-auto">
+			<p>Longitud [l]</p>
+			<div class="input-group mb-3">	
+				<input id="l2" class="form-control form-control-lg" type="number" step="any" placeholder="Longitud"/>
+				<div class="input-group-append">
+					<select class="input-group-text" id="ul2">
+					<option value="0">mm</option>
+					<option value="1" selected>m</option>
+					<option value="2">ft</option>
+					</select>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8 col-lg-4 mx-auto">
+			<p>Peso:</p>
+			<div class="input-group mb-3">	
+				<input type="text" readonly class="form-control-plaintext form-control-lg border rounded-left pl-3" id="p2" placeholder="Peso">
+				<div class="input-group-append">
+					<select class="input-group-text" id="up2">
+					<option value="0">lb</option>
+					<option value="1" selected>kg</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="row mb-0">
+		<div class="col">
+			<h2>Fórmula para el cálculo del peso de una varilla</h2>
+			<p>Para obtener el peso de una varilla hay que multiplicar su volumen por la densidad del material, en este caso acero.</p>
+			<p>El volumen de la varilla puede calcularse a partir de su longitud (L) y del área de su sección circular, calculada a su vez a partir de su diámetro (D).</p>
+			<p class="of">$$\text{Volumen}=\frac{\pi D^2L}{4}$$</p>
+			<p>A continuación obtenemos el peso de la varilla multiplicando este volumen por la densidad del acero. Si el volumen está expresado en m<sup>3</sup>, multiplicamos por la densidad expresada en kg/m<sup>3</sup> para obtener el peso en kg (Densidad acero = 7850 kg/m<sup>3</sup>).</p>
+			<p class="of">$$\text{Peso }[kg]=\frac{\pi D^2L}{4}\times7850\frac{kg}{m^3}$$</p>
+		</div>
+	</div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="/js/calculator.js"></script>	

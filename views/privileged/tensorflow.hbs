@@ -1,0 +1,83 @@
+
+<div id="login_div" class="main-div">
+    <h3>Firebase Web login Example</h3>
+    <input type="email" placeholder="Email..." id="email_field" />
+    <input type="password" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">Login to Account</button>
+</div>
+<!-- Begin Page Content -->
+
+<div class="container main-box" id="user_div">
+         
+
+
+        <a type="button" id="append" value="submit" class="sidebar-brand d-flex align-items-center justify-content-center">
+        <div class="sidebar-brand-icon">
+          <div class="alert alert-danger" role="alert">
+            <img src="/media/deve.png" width="70" height="70">
+            Alert! check it out!
+        </div>
+        </div>
+       </a>
+
+    <div style="padding:50px">
+        <canvas id="myChart" width="600" height="300"></canvas>
+    </div>
+
+    <script>
+        var xs = [1,2,3,4,5,6,7,8,9,10] // starts empty, to be populated with .push
+        var ys = [2,5,1,2.5,3,0.8,1,1.5,1.3,1.8] // starts empty, to be populated with .push
+        var bestfit = [] // to be populated by tf.js
+
+        
+
+        //Create the model
+        const model = tf.sequential();
+            model.add(tf.layers.dense({units: 128, inputShape: [1]})); // layer 1
+            model.add(tf.layers.dense({units: 128, inputShape: [128], activation: "sigmoid"})); // layer 2
+            model.add(tf.layers.dense({units: 1, inputShape: [128]})); // output layer
+            model.compile({loss: 'meanSquaredError', optimizer: 'adam'}); // compile with params
+
+
+
+
+        // the append id is given to our submit button, this will be called
+        document.getElementById("append").onclick = function(){
+
+            // Train the model...then:
+            model.fit(tf.tensor(xs), tf.tensor(ys), {epochs:1000}).then(() => {
+                bestfit = model.predict(tf.tensor(xs, [xs.length, 1])).dataSync(); // create best-fit line from xs data
+                var ctx = document.getElementById("myChart").getContext('2d'); // begin chart
+                // Chart data and settings:
+                
+                for (var i = 0; i < ys.length; i++) {
+                   ys[i]=ys[i]*100;
+                   bestfit[i]=bestfit[i]*100;           
+                  }
+
+                var myChart = new Chart(ctx, {
+                    type: 'line',
+                    options: {scales:{yAxes: [{ticks: {beginAtZero: true}}]}},
+                    data: {
+                        labels: xs,
+                        datasets: [
+                        {
+                            label: 'Original Data',
+                            data: ys,
+                            borderWidth: 1,
+                        },{
+                            label: 'Best Fit line',
+                            data: bestfit,
+                            borderWidth: 1,
+                            borderColor: '#FF0000',
+                            backgroundColor: 'rgba(1,1,1,0)'
+                        },]
+                    },
+                });
+              });
+        }
+    </script>
+  </body>
+
+    </div>
