@@ -274,8 +274,7 @@ html {
     background: #fff;
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.2);
     color: #000000;
-    background: linear-gradient(to right, rgba(23, 69, 160, 0.8) 0%, rgba(46, 152, 201, 0.8) 100%);
-    color: #fff;
+    background: linear-gradient(to right, rgba(20, 68, 163, 0.8) 30%, rgb(0, 162, 255) 70%);    color: #fff;
     box-shadow: none;
   }
   
@@ -294,7 +293,7 @@ html {
   
   /* CTA Section */
   .cta-section {
-    background: linear-gradient(to right, rgba(23, 69, 160, 0.8) 0%, rgba(46, 152, 201, 0.8) 100%);
+    background: linear-gradient(to right, rgb(1, 53, 156) 20%, rgba(0, 135, 245, 0.397) 80%);
     color: #fff;
   }
   
@@ -311,7 +310,7 @@ html {
   }
   
   .cta-section .btn {
-    background: #000000;
+    background: #011baf;
     color: #fff;
   }
   
@@ -639,7 +638,8 @@ html {
     }
 
   .hero-section {
-    background: linear-gradient(to right, rgba(23, 69, 160, 0.8) 0%, rgba(46, 152, 201, 0.8) 100%);
+    background: linear-gradient(to right, rgba(20, 68, 163, 0.8) 30%, rgba(46, 126, 201, 0.8) 70%);
+    /**/
     position: relative;
   }
   
@@ -1144,7 +1144,7 @@ html {
   .section-heading {
     font-size: 3rem;
     font-weight: 700;
-    background: linear-gradient(to right, rgba(23, 69, 160, 0.8) 0%, rgba(46, 152, 201, 0.8) 100%);
+    background: linear-gradient(to right, rgb(1, 67, 197) 30%, rgba(46, 126, 201, 1) 70%);
     -webkit-background-clip: text;
     background-clip:none;
     -webkit-text-fill-color: transparent;

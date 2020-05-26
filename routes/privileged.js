@@ -66,6 +66,12 @@ router.get('/calculator', function(req, res, next) {
   res.render('privileged/calculator',{layout:'privileged'}); 
 });
 
+/* GET blank page. */
+router.get('/blank', function(req, res, next) {
+  res.render('privileged/blank',{layout:'privileged'}); 
+});
+
+
 
 /* GET tables page. */
 router.get('/tables', function(req, res, next) {
