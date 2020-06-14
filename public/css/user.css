@@ -18,7 +18,7 @@ html {
   hr.line { 
     border: 0; 
     height: 1px; 
-    background-image: -webkit-linear-gradient(left, #f0f0f0, #000877, #f0f0f0);
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #c45800, #f0f0f0);
     background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
     background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0); 
@@ -326,13 +326,13 @@ html {
   
   /* CTA Section */
   .cta-section {
-    background: linear-gradient(to right, rgba(0, 29, 87, 1) 20%, rgb(13, 21, 94) 80%);
+    background: linear-gradient(to right, rgba(0, 29, 87, 1) 20%, rgb(202, 91, 0) 80%);
     color: #fff;
   }
   
   .cta-section h2 {
     color: #fff;
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 700;
   }
   
@@ -343,7 +343,7 @@ html {
   }
   
   .cta-section .btn {
-    background: #011baf;
+    background: #001174;
     color: #fff;
   }
   
@@ -380,7 +380,7 @@ html {
   }
   
   .sticky-wrapper.is-sticky .site-navbar {
-    background: #fff;
+    background-color: white;
     border-bottom: 1px solid transparent;
     box-shadow: 4px 0 20px -5px rgba(0, 0, 0, 0.2);
   }
@@ -1191,6 +1191,13 @@ html {
   --------------------------------------------------------------*/
   .footer {
     padding: 5rem 0 2.5rem 0;
+    background-color:white;
+   
+  }
+  .footer h6 {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: rgb(0, 6, 95);
   }
   
   .footer h3 {
@@ -1208,6 +1215,9 @@ html {
     color: rgb(0, 6, 95);
   }
   
+  .footer p {
+    color: rgb(0, 6, 95);
+  }
   .footer .copyright {
     margin-bottom: 0px;
   }
