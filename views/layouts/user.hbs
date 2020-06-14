@@ -3,18 +3,6 @@
 
 <head>
 
-
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-166902686-2"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-166902686-2');
-</script>
-
-
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -24,21 +12,36 @@
   <meta content="" name="descriptison">
   <meta content="" name="keywords">
 
-  <!-- Favicons -->
-
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">  <link rel="stylesheet" href="https://allyoucan.cloud/cdn/icofont/1.0.1/icofont.css" integrity="sha384-jbCTJB16Q17718YM9U22iJkhuGbS0Gd2LjaWb4YJEZToOPmnKDjySVa323U+W7Fv" crossorigin="anonymous">
-
   <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
   <link href="/vendor/icofont/icofont.min.css" rel="stylesheet">
-
   <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/font-awesome-line-awesome/css/all.min.css">  <link href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="/css/user.css" rel="stylesheet">
+
+    <!--Calculator-->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.css" integrity="sha384-dbVIfZGuN1Yq7/1Ocstc1lUEm+AT+/rCkibIcC/OmWo5f0EA48Vf8CytHzGrSwbQ" crossorigin="anonymous">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/katex.min.js" integrity="sha384-2BKqo+exmr9su6dir+qCw08N2ZKRucY4PrGQPPWU1A7FtlCGjmEGFqXCv5nyM5Ij" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.10.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"
+      onload="renderMathInElement(document.body, {
+                delimiters: [
+                    {left: '$$', right: '$$', display: true},
+                    {left: '$', right: '$', display: false}
+                ]
+            });"></script>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+  <!-- =======================================================
+  * Template Name: SoftLand - v2.0.1
+  * Template URL: https://bootstrapmade.com/softland-bootstrap-app-landing-page-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
 
 </head>
 
@@ -61,7 +64,9 @@
       <div class="row align-items-center">
 
         <div class="col-6 col-lg-2">
-          <h1 class="mb-0 site-logo"><a href="/" class="mb-0">Figurados y Mallas SAS</a></h1>
+          <h1 class="mb-0 site-logo"><a href="/" class="mb-0"><img src="/media/logo.png" alt="Image" class="img-fluid"> </a></h1>
+
+             
         
 
         </div>
@@ -71,10 +76,9 @@
 
             <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-lg-block">
               <li class="active"><a href="/" class="nav-link">Home</a></li>
-              <li><a href="/#Nosotros" class="nav-link">Nosotros</a></li>
-              <li><a href="/#Servicios" class="nav-link">Servicios</a></li>
-              <li><a href="/#Contacto" class="nav-link">Contacto</a></li>
-              <li><a href="/cotizar" class="nav-link">Cotización</a></li>
+              <li><a href="/nosotros" class="nav-link">Nosotros</a></li>
+              <li><a href="/productos" class="nav-link">Productos</a></li>
+              <li><a href="/contacto" class="nav-link">Contacto</a></li>
             </ul>
           </nav>
         </div>
@@ -91,82 +95,68 @@
 
   </header>
 
-  <!-- ======= Hero Section ======= -->
-  <section class="hero-section" id="hero">
-    
-        <video autoplay="autoplay" loop="loop" id="video_background" preload="auto" onloadedmetadata="this.muted=true"/>
-      <source src="media/VideoFiguradosyMallas.mp4" type="video/mp4" />
-    </video/>
 
-    <div class="wave">
 
-      <svg width="100%" height="355px" viewBox="0 0 1920 355" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-          <g id="Apple-TV" transform="translate(0.000000, -402.000000)" fill="#FFFFFF">
-            <path d="M0,439.134243 C175.04074,464.89273 327.944386,477.771974 458.710937,477.771974 C654.860765,477.771974 870.645295,442.632362 1205.9828,410.192501 C1429.54114,388.565926 1667.54687,411.092417 1920,477.771974 L1920,757 L1017.15166,757 L0,757 L0,439.134243 Z" id="Path"></path>
-          </g>
-        </g>
-      </svg>
+  {{{body}}}
 
-    </div>
-
-    <div class="container">
-      <div class="row align-items-center">
-        <div class="col-12 hero-text-image">
-          <div class="row">
-            <div class="col-lg-7 text-center text-lg-left">
-              <h1 data-aos="fade-right">Material para la construcción</h1>
-              <p class="mb-5" data-aos="fade-right" data-aos-delay="100">Malla electrosoldada - Hierro figurado</p>
-              <p data-aos="fade-right" data-aos-delay="200" data-aos-offset="-500"><a href="/signup" class="btn btn-outline-white">Login</a></p>
-            </div>
+     <!-- ======= MAPA Section ======= -->
+    <section class="section cta-section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-6 mr-auto text-center text-md-left mb-5 mb-md-0">
+            <h2 class="text-center">La mejor opción en acero figurado y malla electrosoldada</h2>
           </div>
+          <div class="col-md-5 text-center text-md-right">
+            <p><a href="/contacto" class="btn"><span class="icofont-envelope mr-3"></span>CONTÁCTENOS </a></p>
+          </div>
+
+          
         </div>
       </div>
-    </div>
-
-  </section><!-- End Hero -->
-
-{{{body}}}
-
+    </section><!-- End MAPA Section -->
   <!-- ======= Footer ======= -->
   <footer class="footer" role="contentinfo">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4 mb-4 mb-md-0">
-        <div class="sidebar-brand-icon">
-          <img src="/media/deve.png">
-        </div>
-        </div>
-        <div class="col-md-7 ml-auto">
-          <div class="row site-section pt-0">
-            <div class="col-md-4 mb-4 mb-md-0">
-              <h3>Navigation</h3>
-              <ul class="list-unstyled">
-              <li class="active"><a href="/" class="nav-link">Home</a></li>
-              <li><a href="/#Nosotros" class="nav-link">Nosotros</a></li>
-              <li><a href="/#Servicios" class="nav-link">Servicios</a></li>
-              <li><a href="/#Contacto" class="nav-link">Contacto</a></li>
-              </ul>
-            </div>
-            <div class="col-md-4 mb-4 mb-md-0">
-              <h3>Services</h3>
-              <ul class="list-unstyled">
-              <li><a href="/cotizar" class="nav-link">Cotización</a></li>
-              </ul>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4 mb-md-0">
+            <img src="/media/logo.png" alt="Image" class="img-fluid">    
+            <ul  class="list-unstyled">
+              <li><h3 class="text-center"><span class="icofont-excavator mr-3"></span>FABRICANTES</h3></li>
+              <li><h3 class="text-center"><span class="icofont-truck-alt mr-3"></span>DISTRIBUIDORES</h3></li>
+              <li><h3 class="text-center"><span class="icofont-brand-myspace mr-3"></span>MAYORISTAS</h3></li>
+            </ul>
+          </div>
+          <div class="col-md-7 ml-auto">
+            <div class="row site-section pt-0">
+              <div class="col-md-4 mb-4 mb-md-0">
+                <h3>SERVICIO AL CLIENTE</h3>
+                <ul class="list-unstyled">
+                   <li><p class="text-left"><span class="icofont-clock-time mr-3"></span>Lunes-Viernes: 7am a 5:30pm</p></li>
+                   <li><p class="text-left"><span class="icofont-clock-time mr-3"></span>Sábado: 8am a 1pm</p></li>
+                </ul>
+              </div>
+              <div class="col-md-4 mb-4 mb-md-0">
+                <h3>CONTACTO</h3>
+                <ul class="list-unstyled">
+                  <li><p class="text-left"><span class="icofont-location-pin mr-3"></span>Calle 7 No. 27 - 31 Ricaurte</p></li>
+                  <li><p class="text-left"><span class="icofont-iphone mr-3"></span>321 452 6053</p></li>
+                  <li><p class="text-left"><span class="icofont-phone mr-3"></span>408 7362 - 738 9616</p></li>
+                  <li><p class="text-left"><span class="icofont-email mr-3"></span>info@figuradosymallas.com</p></li>
+                </ul>
+              </div>
+
             </div>
           </div>
         </div>
       </div>
-
-
-    </div>
-  </footer>
+  </footer><!-- ======= END footer ======= -->
+ 
 
   <a href="#" class="back-to-top"><i class="icofont-simple-up"></i></a>
   
 
 
-  <!-- Vendor JS Files -->
+   <!-- Vendor JS Files -->
    <!-- Bootstrap core JavaScript-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
