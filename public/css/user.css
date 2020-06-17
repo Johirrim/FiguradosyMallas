@@ -142,7 +142,7 @@ html {
   
   .btn.btn-primary {
     background: #2d71a1;
-    background: linear-gradient(to right, rgba(23, 69, 160, 0.8) 0%, rgba(46, 152, 201, 0.8) 100%);
+    background: linear-gradient(to right, rgba(0, 29, 87, 1) 20%, rgb(202, 91, 0) 80%);
     color: #fff;
     box-shadow: 0 10px 30px 0 rgba(0, 0, 0, 0.15);
   }
